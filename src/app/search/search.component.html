@@ -1,9 +1,13 @@
-<div>
-    <input [(ngModel)]="value1" placeholder="Enter search term">
-    <textarea [(ngModel)]="value2" placeholder="Enter values to compare, separated by commas"></textarea>
-    <button (click)="onSearch()">Search</button>
+<div class="main">
+  <div>
+    <input [(ngModel)]="value1" placeholder="Enter search term" />
+    <textarea
+      [(ngModel)]="value2"
+      placeholder="Enter values to compare, separated by commas"
+    ></textarea>
+    <button mat-button (click)="onSearch()">Search</button>
   </div>
-  
+
   <div *ngIf="results$ | async as results">
     <h3>Results:</h3>
     <ul>
@@ -12,9 +16,9 @@
       </li>
     </ul>
   </div>
-  
+
   <div *ngIf="error$ | async as error">
     <h3>Error:</h3>
     <pre>{{ error }}</pre>
   </div>
-  
+</div>

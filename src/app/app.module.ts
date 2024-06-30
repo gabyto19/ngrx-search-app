@@ -10,6 +10,7 @@ import { SearchComponent } from './search/search.component';
 import { searchReducer } from './store/reducers/search.reducer';
 import { SearchEffects } from './store/effects/search.effects';
 import { environment } from '../environments/environment';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,9 @@ import { environment } from '../environments/environment';
     EffectsModule.forRoot([SearchEffects]),
     !environment.production ? StoreDevtoolsModule.instrument() : []
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

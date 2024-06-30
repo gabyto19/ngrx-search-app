@@ -1,0 +1,21 @@
+.main{
+    width: 500px;
+    margin: 200px auto;
+    background-color: brown;
+    padding: 25px;
+}
+.main div:first-child{
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+.main input{
+    height: 40px;
+    width: 150px;
+}
+.main textarea{
+    resize: none;
+    height: 70px;
+}
